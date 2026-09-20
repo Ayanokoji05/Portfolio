@@ -1,0 +1,59 @@
+---
+title: Getting Started with Graph Neural Networks for Science
+date: "2024-09-15"
+tags:
+  - Machine Learning
+  - GNNs
+  - Tutorial
+excerpt: A comprehensive guide to understanding and implementing graph neural networks for scientific applications, from molecular modeling to social network analysis.
+readTime: 8 min read
+---
+
+Graph Neural Networks (GNNs) have revolutionized how we approach problems that are naturally represented as graphs — from molecules and proteins to social networks and citation graphs.
+
+## Why GNNs Matter for Science
+
+Traditional neural networks assume data lives on regular grids (like images) or sequences (like text). But scientific data is often structured as graphs:
+
+- **Molecular structures**: atoms are nodes, bonds are edges
+- **Protein interaction networks**: proteins are nodes, interactions are edges
+- **Citation networks**: papers are nodes, citations are edges
+
+## Key Concepts
+
+### Message Passing
+
+The core idea behind GNNs is *message passing*: each node collects information from its neighbors, processes it, and updates its own representation.
+
+```python
+import torch
+import torch.nn as nn
+from torch_geometric.nn import GCNConv
+
+class SimpleGNN(nn.Module):
+    def __init__(self, in_channels, hidden_channels, out_channels):
+        super().__init__()
+        self.conv1 = GCNConv(in_channels, hidden_channels)
+        self.conv2 = GCNConv(hidden_channels, out_channels)
+
+    def forward(self, x, edge_index):
+        x = self.conv1(x, edge_index).relu()
+        x = self.conv2(x, edge_index)
+        return x
+```
+
+### Choosing the Right Architecture
+
+- **GCN** — Good for homogeneous graphs with uniform structure
+- **GAT** — Better when neighbor importance varies
+- **SchNet/DimeNet** — Designed for 3D molecular geometries
+
+## Getting Started
+
+Start with the PyTorch Geometric library. It provides efficient implementations of all major GNN architectures and comes with many benchmark datasets.
+
+> The key insight: if your data has relational structure, a GNN will almost always outperform a model that ignores those relationships.
+
+## Conclusion
+
+GNNs open up exciting possibilities for scientific discovery. Whether you are working on drug design, materials science, or network analysis, understanding GNNs is becoming an essential skill.

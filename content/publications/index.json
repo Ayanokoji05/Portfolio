@@ -1,0 +1,79 @@
+[
+  {
+    "id": "pub-1",
+    "title": "Graph Neural Networks for Accelerated Molecular Dynamics Simulations",
+    "authors": "P. Kumar, A. Singh, R. Sharma, M. Patel",
+    "journal": "Nature Machine Intelligence",
+    "year": 2024,
+    "type": "Journal",
+    "doi": "10.1038/s42256-024-00001",
+    "citations": 45,
+    "abstract": "We present a novel graph neural network architecture that learns to predict molecular forces with ab initio accuracy, enabling molecular dynamics simulations that are 100x faster than conventional methods."
+  },
+  {
+    "id": "pub-2",
+    "title": "A Survey on Fairness in Machine Learning: Concepts, Metrics, and Methods",
+    "authors": "P. Kumar, J. Chen",
+    "journal": "ACM Computing Surveys",
+    "year": 2023,
+    "type": "Journal",
+    "doi": "10.1145/3616855.3616861",
+    "citations": 218,
+    "abstract": "This comprehensive survey covers the landscape of fairness in machine learning, cataloging 50+ fairness definitions, evaluation metrics, and mitigation strategies across different application domains."
+  },
+  {
+    "id": "pub-3",
+    "title": "Transformer-Based Approaches for Multi-Horizon Time Series Forecasting",
+    "authors": "P. Kumar, R. Gupta, S. Verma",
+    "journal": "Nature Communications",
+    "year": 2023,
+    "type": "Journal",
+    "doi": "10.1038/s41467-023-12345",
+    "citations": 156,
+    "abstract": "We propose a modified transformer architecture with temporal attention mechanisms that achieves state-of-the-art performance on multi-horizon forecasting tasks across diverse domains."
+  },
+  {
+    "id": "pub-4",
+    "title": "SciLitMiner: An Automated Pipeline for Scientific Knowledge Extraction",
+    "authors": "P. Kumar, L. Wang, D. Brown",
+    "journal": "Proceedings of ACL 2024",
+    "year": 2024,
+    "type": "Conference",
+    "doi": "10.18653/v1/2024.acl-long.123",
+    "citations": 28,
+    "abstract": "We introduce SciLitMiner, an end-to-end pipeline that combines named entity recognition, relation extraction, and knowledge graph construction for mining scientific literature at scale."
+  },
+  {
+    "id": "pub-5",
+    "title": "Physics-Informed Neural Networks for Partial Differential Equations",
+    "authors": "P. Kumar, A. Singh",
+    "journal": "ICML 2023",
+    "year": 2023,
+    "type": "Conference",
+    "doi": "10.5555/3618408.3618512",
+    "citations": 89,
+    "abstract": "We present an improved physics-informed neural network framework that incorporates adaptive loss weighting and curriculum learning for solving complex PDEs with improved convergence."
+  },
+  {
+    "id": "pub-6",
+    "title": "Interpretable Machine Learning for Clinical Decision Support",
+    "authors": "P. Kumar, M. Patel, K. Reddy",
+    "journal": "Proceedings of NeurIPS 2022",
+    "year": 2022,
+    "type": "Conference",
+    "doi": "10.5555/3600270.3601234",
+    "citations": 72,
+    "abstract": "We develop an interpretable ML framework combining attention mechanisms with rule extraction to provide transparent clinical decision support in diagnostic settings."
+  },
+  {
+    "id": "pub-7",
+    "title": "Adversarial Robustness in Scientific Machine Learning",
+    "authors": "P. Kumar",
+    "journal": "arXiv preprint",
+    "year": 2024,
+    "type": "Preprint",
+    "doi": "10.48550/arXiv.2024.12345",
+    "citations": 12,
+    "abstract": "This work investigates the vulnerability of scientific ML models to adversarial perturbations and proposes defense mechanisms tailored to physical constraints."
+  }
+]

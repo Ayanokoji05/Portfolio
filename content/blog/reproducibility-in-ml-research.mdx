@@ -1,0 +1,79 @@
+---
+title: Why Reproducibility Matters in ML Research (And How to Achieve It)
+date: "2024-07-10"
+tags:
+  - Machine Learning
+  - Reproducibility
+  - Best Practices
+excerpt: The reproducibility crisis in ML is real. Here are concrete steps you can take to make your research reproducible and trustworthy.
+---
+
+The reproducibility crisis in machine learning research is well-documented. Studies show that a significant percentage of ML papers cannot be reproduced, even with access to the original code.
+
+## The Problem
+
+Irreproducible research wastes time and erodes trust. Common causes include:
+
+- **Missing hyperparameters**: "We tuned learning rate" — but to what value?
+- **Cherry-picked results**: Reporting the best of 100 runs
+- **Environment dependencies**: "Works on my machine" syndrome
+- **Data leakage**: Subtle leakage between train and test sets
+
+## A Reproducibility Checklist
+
+### 1. Code and Environment
+
+```bash
+# Pin your dependencies
+pip freeze > requirements.txt
+
+# Or better, use a lockfile
+poetry lock
+```
+
+Use Docker containers or conda environments to capture the full environment.
+
+### 2. Random Seeds
+
+Set seeds for ALL sources of randomness:
+
+```python
+import random
+import numpy as np
+import torch
+
+def set_seed(seed=42):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+```
+
+### 3. Experiment Tracking
+
+Use tools like Weights & Biases, MLflow, or even a simple spreadsheet. Log:
+
+- All hyperparameters
+- Training curves
+- Hardware used
+- Wall-clock training time
+- Random seed
+
+### 4. Report Statistics
+
+Never report a single number. Run experiments with multiple seeds and report:
+
+- Mean ± standard deviation
+- Minimum and maximum
+- Number of runs
+
+## The Cultural Shift
+
+Reproducibility is not just a technical problem — it is a cultural one. We need to:
+
+- Reward reproducible work in peer review
+- Provide resources for replication studies
+- Normalize sharing negative results
+
+> Making research reproducible takes effort, but it is one of the most impactful things you can do for the scientific community.
